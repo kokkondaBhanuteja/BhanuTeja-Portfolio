@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #FFFFFF;
+    --bg-subtle: #F7F7F5;
+    --bg-footer: #0F0F0F;
+    --fg: #0A0A0A;
+    --fg-muted: #4B5563;
+    --accent: #1D4ED8;
+    --border: #E5E5E5;
+  }
+  
+  html, body {
+    @apply bg-bg text-fg antialiased;
+    font-family: var(--font-inter), sans-serif;
+  }
+  
+  ::selection {
+    background-color: var(--accent);
+    color: white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-syne), sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+  
+  *:focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2;
+  }
+}
